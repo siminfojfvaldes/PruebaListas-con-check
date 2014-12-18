@@ -271,14 +271,17 @@ Begin WebPage WebPage1
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
+      LastIndex       =   0
       Left            =   754
+      ListIndex       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
-      LockRight       =   True
+      LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
+      RowCount        =   0
       Scope           =   0
       ScrollbarsVisible=   0
       Style           =   "-1"
@@ -342,13 +345,6 @@ End
 	#tag EndEvent
 
 
-	#tag Enum, Name = TipoControl, Flags = &h0
-		TextBox
-		  CheckBox
-		PopupMenu
-	#tag EndEnum
-
-
 #tag EndWindowCode
 
 #tag Events Button1
@@ -372,6 +368,7 @@ End
 #tag Events ListControles1
 	#tag Event
 		Sub Abierto()
+		  
 		  dim c as new Columna
 		  
 		  

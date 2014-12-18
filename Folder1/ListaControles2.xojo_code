@@ -45,7 +45,6 @@ Begin WebContainer ListaControles2
       Left            =   5
       LimitText       =   0
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -82,7 +81,6 @@ Begin WebContainer ListaControles2
       Index           =   -2147483648
       Left            =   0
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -122,7 +120,6 @@ Begin WebContainer ListaControles2
       Left            =   2
       ListIndex       =   -1
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -155,6 +152,13 @@ End
 
 #tag WindowCode
 	#tag Event
+		Sub Open()
+		  Abrir()
+		  Redibujar()
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Sub Resized()
 		  ' Este evento controla que cuando se redimensione el container, la lista y el rectangulo
 		  ' siempre mantengan la misma relación de aspecto
@@ -174,7 +178,17 @@ End
 
 	#tag Method, Flags = &h0
 		Sub AddRow(paramarray data as String)
-		  self.lista.AddRow(data)
+		  'self.lista.AddRow(data)
+		  
+		  'dim fila as new Fila
+		  'fila.text_Fecha.Text = text_Fecha.Text
+		  'fila.text_Notas.Text = text_Notas.Text
+		  ''fila.text_Diagnosticos.Text = text_Diagnostico.Text
+		  'fila.check_EP.Value = check_Ep.Value
+		  '
+		  '
+		  'fila.EmbedWithin(list_Imagenes, 0, 23 + list_Imagenes.alturaTotal, fila.Width, fila.Height)
+		  'list_Imagenes.alturaTotal = list_Imagenes.alturaTotal+(fila.Height-1)
 		End Sub
 	#tag EndMethod
 
@@ -282,7 +296,9 @@ End
 
 	#tag Method, Flags = &h21
 		Private Sub Redibujar()
-		  
+		  for i as integer = 0 to self.Filas.Ubound - 1
+		    'filas(i).
+		  next
 		End Sub
 	#tag EndMethod
 
