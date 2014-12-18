@@ -180,15 +180,30 @@ End
 		Sub AddRow(paramarray data as String)
 		  'self.lista.AddRow(data)
 		  
-		  'dim fila as new Fila
-		  'fila.text_Fecha.Text = text_Fecha.Text
-		  'fila.text_Notas.Text = text_Notas.Text
-		  ''fila.text_Diagnosticos.Text = text_Diagnostico.Text
-		  'fila.check_EP.Value = check_Ep.Value
-		  '
-		  '
-		  'fila.EmbedWithin(list_Imagenes, 0, 23 + list_Imagenes.alturaTotal, fila.Width, fila.Height)
-		  'list_Imagenes.alturaTotal = list_Imagenes.alturaTotal+(fila.Height-1)
+		  dim fila as new Fila
+		  fila.Height = 22
+		  fila.Width = self.Width
+		  
+		  for i as integer = 0 to self.ColumnCount -1
+		    
+		    dim anchoColumna as integer = self.ColumnWidth(i)
+		    
+		    select case self.columnas(i).TipoColumna
+		      
+		    case "TextBox"
+		      dim t as new WebTextField
+		      'fila.EmbedWithin(t
+		      
+		    case "CheckBox"
+		      
+		    case "Popup"
+		      
+		    end select
+		    
+		  next
+		  
+		  fila.EmbedWithin(list_Imagenes, 0, 23 + list_Imagenes.alturaTotal, fila.Width, fila.Height)
+		  list_Imagenes.alturaTotal = list_Imagenes.alturaTotal+(fila.Height-1)
 		End Sub
 	#tag EndMethod
 
@@ -223,6 +238,18 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function ColumnWidth(i as integer) As integer
+		  return self.lista.ColumnWidth(i)
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub ColumnWidth(i as integer, assigns value as integer)
+		  self.lista.ColumnWidth(i) = value
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function ColumnWidths() As string
 		  return self.lista.ColumnWidths
 		End Function
@@ -231,6 +258,8 @@ End
 	#tag Method, Flags = &h0
 		Sub ColumnWidths(assigns value as String)
 		  self.lista.ColumnWidths = value
+		  
+		  ' TO DO: HACER UN ARRAY QUE CONTENGA LOS ANCHOS DE LAS COLUMNAS
 		End Sub
 	#tag EndMethod
 
