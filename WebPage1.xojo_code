@@ -393,17 +393,22 @@ End
 #tag Events Button2
 	#tag Event
 		Sub Action()
-		  dim a as new WebContainer
+		  'dim a as new WebContainer
+		  '
+		  'a.width = 100
+		  'a.height = 100
+		  '
+		  'a.top = 0
+		  'a.left = 0
+		  '
+		  'a.Style = Style1
+		  '
+		  'a.EmbedWithin(self, 0, 0, a.Width, a.Height)
 		  
-		  a.width = 100
-		  a.height = 100
+		  dim b as new WebButton
 		  
-		  a.top = 0
-		  a.left = 0
-		  
-		  a.Style = Style1
-		  
-		  a.EmbedWithin(self, 0, 0, a.Width, a.Height)
+		  b.top = 10
+		  b.left = 10
 		End Sub
 	#tag EndEvent
 #tag EndEvents

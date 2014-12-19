@@ -1,0 +1,72 @@
+#tag WebPage
+Begin WebContainer TextContainer
+   Compatibility   =   ""
+   Cursor          =   0
+   Enabled         =   True
+   Height          =   22
+   HelpTag         =   ""
+   HorizontalCenter=   0
+   Index           =   -2147483648
+   Left            =   0
+   LockBottom      =   False
+   LockHorizontal  =   False
+   LockLeft        =   True
+   LockRight       =   False
+   LockTop         =   True
+   LockVertical    =   False
+   Style           =   "None"
+   TabOrder        =   0
+   Top             =   0
+   VerticalCenter  =   0
+   Visible         =   True
+   Width           =   20
+   ZIndex          =   1
+   _DeclareLineRendered=   False
+   _HorizontalPercent=   0.0
+   _IsEmbedded     =   False
+   _Locked         =   False
+   _NeedsRendering =   True
+   _OfficialControl=   False
+   _OpenEventFired =   False
+   _ShownEventFired=   False
+   _VerticalPercent=   0.0
+   Begin WebTextField TextField1
+      AutoCapitalize  =   True
+      AutoComplete    =   True
+      AutoCorrect     =   True
+      CueText         =   ""
+      Cursor          =   0
+      Enabled         =   True
+      HasFocusRing    =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   0
+      LimitText       =   0
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      LockVertical    =   False
+      ReadOnly        =   False
+      Scope           =   0
+      Style           =   "-1"
+      TabOrder        =   0
+      Text            =   ""
+      Top             =   0
+      Type            =   0
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   20
+      ZIndex          =   1
+      _NeedsRendering =   True
+   End
+End
+#tag EndWebPage
+
+#tag WindowCode
+#tag EndWindowCode
+

@@ -1,8 +1,53 @@
 #tag Class
 Protected Class Fila
 Inherits WebContainer
+	#tag Method, Flags = &h0
+		Sub AddCell(left as integer)
+		  ' Este método añade un textbox en la posición indicada de la fila. Sin rowtag ni tipo de celda.
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub AddCell(left as integer,)
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub AddCell(left as integer, tipo as String)
+		  select case tipo
+		    
+		  case "Textbox"
+		    dim t as new cont_Text
+		    
+		  case "Popup"
+		    
+		  case "Check"
+		    
+		  end select
+		End Sub
+	#tag EndMethod
+
+
 	#tag Property, Flags = &h0
-		Celdas() As String
+		Celdas() As WebControl
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Check() As WebCheckbox
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Popup() As WebPopupMenu
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		RowTag As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Text() As WebTextField
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

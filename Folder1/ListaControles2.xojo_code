@@ -186,13 +186,14 @@ End
 		  
 		  for i as integer = 0 to self.ColumnCount -1
 		    
-		    dim anchoColumna as integer = self.ColumnWidth(i)
+		    dim anchoColumna as integer = cdbl(self.ColumnWidth(i))
 		    
 		    select case self.columnas(i).TipoColumna
 		      
 		    case "TextBox"
-		      dim t as new WebTextField
-		      'fila.EmbedWithin(t
+		      dim t as new cont_Text
+		      t.Width = anchoColumna
+		      t.EmbedWithin(self,0,23+self.Height, anchoColumna,22)
 		      
 		    case "CheckBox"
 		      
@@ -202,8 +203,8 @@ End
 		    
 		  next
 		  
-		  fila.EmbedWithin(list_Imagenes, 0, 23 + list_Imagenes.alturaTotal, fila.Width, fila.Height)
-		  list_Imagenes.alturaTotal = list_Imagenes.alturaTotal+(fila.Height-1)
+		  'fila.EmbedWithin(list_Imagenes, 0, 23 + list_Imagenes.alturaTotal, fila.Width, fila.Height)
+		  'list_Imagenes.alturaTotal = list_Imagenes.alturaTotal+(fila.Height-1)
 		End Sub
 	#tag EndMethod
 
@@ -238,13 +239,13 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function ColumnWidth(i as integer) As integer
+		Function ColumnWidth(i as integer) As String
 		  return self.lista.ColumnWidth(i)
 		End Function
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Sub ColumnWidth(i as integer, assigns value as integer)
+		Sub ColumnWidth(i as integer, assigns value as String)
 		  self.lista.ColumnWidth(i) = value
 		End Sub
 	#tag EndMethod
@@ -386,6 +387,10 @@ End
 		Event TieneFoco()
 	#tag EndHook
 
+
+	#tag Property, Flags = &h0
+		AlturaTotal As Integer
+	#tag EndProperty
 
 	#tag Property, Flags = &h0
 		Columnas() As Columna
